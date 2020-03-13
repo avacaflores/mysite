@@ -45,17 +45,12 @@ $theMajor = get_user_meta($user->ID, 'major', true);
       
 <?php } else { ?>
 
-  <p>Login to access this section</p>  
+  <p>Login to access this section</p> 
   
 
 <?php } 
 
-    if(file_exists(dirname(__FILE__) . '/variables.php')) {
-        $googlekey = getenv('googlekey');
-    } else {
-        $googlekey = getenv('APPSETTING_googlekey');
-        echo $googlekey;
-    }
+
 
     ?>
   </div>
