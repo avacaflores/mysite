@@ -49,8 +49,15 @@ $theMajor = get_user_meta($user->ID, 'major', true);
   
 
 <?php } 
-?>
 
+    if(file_exists(dirname(__FILE__) . '/variables.php')) {
+        $googlekey = getenv('googlekey');
+    } else {
+        $googlekey = getenv('APPSETTING_googlekey');
+        echo $googlekey;
+    }
+
+    ?>
   </div>
   
 <?php get_footer();
