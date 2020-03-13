@@ -117,6 +117,13 @@ add_action('pre_get_posts', 'university_adjust_queries');
 
 function universityMapKey($api)
 {
+
+    if(file_exists(dirname(__FILE__) . '/variables.php')) {
+        $googlekey = getenv('googlekey');
+    } else {
+        $googlekey = getenv('APPSETTING_googlekey');
+    }
+    
     $api['key'] = $googlekey;
     return $api;
 }
