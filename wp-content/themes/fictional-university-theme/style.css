@@ -1096,6 +1096,20 @@ p, li {
 }
 
 
+/* Get Directions Box */
+
+.directions-box {
+  float: left;
+  font-size: 1rem;
+  background-color: #3273F4;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0px 0px 0px;
+  position: relative;
+}
 
 
 /* Customize Login Screen */

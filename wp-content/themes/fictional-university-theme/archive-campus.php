@@ -11,8 +11,6 @@ pageBanner(array(
 
 
 
-
-
 <div class="acf-map">
 
 <?php
@@ -25,7 +23,9 @@ pageBanner(array(
       <?php echo $mapLocation['address']; 
       $target = str_replace(' ','+',$mapLocation['address']);
       $fulltarget = "https://www.google.com/maps/dir/?api=1&origin=current+location&destination=" . $target . "&travelmode=walking";?>
-      <hr><p><a href="<?php echo $fulltarget ?>" target="_blank">Get Directions</a></p>
+      <p>
+      <a class="directions-box" href="<?php echo $fulltarget ?>" target="_blank">
+      <i class="fas fa-route fa-lg" style="margin-right: 10px;"></i>Get Directions in Google Maps</a></p>
     </div>
   <?php } ?>
 
