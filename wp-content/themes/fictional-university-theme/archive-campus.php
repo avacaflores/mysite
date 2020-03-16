@@ -10,6 +10,7 @@ pageBanner(array(
 <div class="container container--narrow page-section">
 
 
+<?php echo getenv('APPSETTING_googlekey');?>
 
 <div class="acf-map">
 
