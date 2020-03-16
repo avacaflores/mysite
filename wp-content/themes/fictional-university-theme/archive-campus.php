@@ -22,7 +22,10 @@ pageBanner(array(
    ?>
     <div class="marker" data-lat="<?php echo $mapLocation['lat'] ?>" data-lng="<?php echo $mapLocation['lng']; ?>">
       <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-      <?php echo $mapLocation['address']; ?>
+      <?php echo $mapLocation['address']; 
+      $target = str_replace(' ','+',$mapLocation['address']);
+      $fulltarget = "https://www.google.com/maps/dir/?api=1&origin=current+location&destination=" . $target . "&travelmode=walking";?>
+      <hr><p><a href="<?php echo $fulltarget ?>" target="_blank">Get Directions</a></p>
     </div>
   <?php } ?>
 
